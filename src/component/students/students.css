@@ -1,0 +1,21 @@
+.student-list {
+  list-style-type: none;
+}
+
+.student-list a {
+  text-decoration: none;
+}
+
+.add-btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.add-btn a {
+  text-decoration: none;
+  color: #000;
+  box-shadow: 0 0 10px lightgrey;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
