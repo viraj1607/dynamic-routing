@@ -32,7 +32,7 @@ function Axios() {
       border: 0,
     },
   }));
-
+  //   const [active, setActive] = useState(false);
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
@@ -54,20 +54,23 @@ function Axios() {
             <TableRow>
               <StyledTableCell>User Id</StyledTableCell>
               <StyledTableCell align="left">Task</StyledTableCell>
-              <StyledTableCell align="left">Status</StyledTableCell>
+              {/* <StyledTableCell align="left">Status</StyledTableCell> */}
+              <StyledTableCell align="left">Active</StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {data.map((row) => (
-              <StyledTableRow key={row.name}>
+              <StyledTableRow
+                key={row.name}
+                style={{ backgroundColor: row.completed ? "green" : "red" }}
+              >
                 <StyledTableCell component="th" scope="row">
                   {row.userId}
                 </StyledTableCell>
                 <StyledTableCell align="left">{row.title}</StyledTableCell>
                 <StyledTableCell align="left">
-                  {row.completed
-                    ? "Task is Completed"
-                    : "Task is not Completed"}
+                  {/* {active ? "Active" : "Not Active"} */}
+                  {row.completed ? "Active" : "Not active"}
                 </StyledTableCell>
               </StyledTableRow>
             ))}
